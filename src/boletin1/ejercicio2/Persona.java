@@ -8,4 +8,17 @@ public class Persona {
 	int edad;
 	
 	
+	public Persona(String dni , String nombre , String apellido , int edad) {
+		
+		this.dni=dni;
+		this.nombre=nombre;
+		this.apellido= apellido;
+		
+		if(edad>0) {
+		this.edad=edad;
+		}
+		
+		
+	}
+	
 }
