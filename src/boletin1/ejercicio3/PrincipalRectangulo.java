@@ -17,60 +17,60 @@ public class PrincipalRectangulo {
 		int y2=0;
 		
 		System.out.println("Introduzca las coodenadas de R1:");
-		System.out.print("x1 = ");
+		System.out.print("getX1() = ");
 		x1= sc.nextInt();
-		System.out.print("y1 = ");
+		System.out.print("getY1() = ");
 		y1=sc.nextInt();
-		System.out.print("x2 = ");
+		System.out.print("getX2() = ");
 		x2=sc.nextInt();
-		System.out.print("y2 = ");
+		System.out.print("getY2() = ");
 		y2=sc.nextInt();
 		
 		R1= new Rectangulo(x1, y1, x2, y2);
 		
 		System.out.println("Introduzca las coodenadas de R2:");
-		System.out.print("x1 = ");
+		System.out.print("getX1() = ");
 		x1= sc.nextInt();
-		System.out.print("y1 = ");
+		System.out.print("getY1() = ");
 		y1=sc.nextInt();
-		System.out.print("x2 = ");
+		System.out.print("getX2() = ");
 		x2=sc.nextInt();
-		System.out.print("y2 = ");
+		System.out.print("getY2() = ");
 		y2=sc.nextInt();
 
 		R2= new Rectangulo(x1, y1, x2, y2);
 		
 		
-		System.out.println("Rectagulo 1: (" + R1.x1 + " , " + R1.y1 + ") (" +  R1.x2 + " , " + R1.y2 + ")");
-		System.out.println("Rectagulo 2: (" + R2.x1 + " , " + R2.y1 + ") (" +  R2.x2 + " , " + R2.y2 + ")");
+		System.out.println("Rectagulo 1: (" + R1.getX1() + " , " + R1.getY1() + ") (" +  R1.getX2() + " , " + R1.getY2() + ")");
+		System.out.println("Rectagulo 2: (" + R2.getX1()  + " , " + R2.getY1()  + ") (" +  R2.getX2()  + " , " + R2.getY2()  + ")");
 		
-		System.out.println("Perimetro 1 = " + Math.abs((R1.x2-R1.x1 + R1.y2-R1.y1)*2) );
-		System.out.println("Perimetro 2 = " + Math.abs((R2.x2-R2.x1 + R2.y2-R2.y1)*2) );
+		System.out.println("Perimetro 1 = " + Math.abs((R1.getX2()-R1.getX1() + R1.getY2() -R1.getY1())*2) );
+		System.out.println("Perimetro 2 = " + Math.abs((R2.getX2()-R2.getX1() + R2.getY2() -R2.getY1())*2) );
 		
-		System.out.println("Area 1 = " + Math.abs(R1.x2-R1.x1)*Math.abs( R1.y2-R1.y1) );
-		System.out.println("Area 1 = " + Math.abs(R2.x2-R2.x1)*Math.abs( R2.y2-R2.y1) );
+		System.out.println("Area 1 = " + Math.abs(R1.getX2()-R1.getX1())*Math.abs( R1.getY2()-R1.getY1()) );
+		System.out.println("Area 1 = " + Math.abs(R2.getX2()-R2.getX1())*Math.abs( R2.getY2()-R2.getY1()) );
 		
 		System.out.println();
 		System.out.println("Modificaciones");
 		
-		R1.x1+=4;
-		R1.y1+=0;
-		R1.x2-=5;
-		R1.y2*=2;
+		R1.setX1(R1.getX1()*2);
+		R1.setY1(R1.getY1()%3);
+		R1.setX2(R1.getX2()+3);
+		R1.setY2(R1.getY2()+5);
 		
-		R2.x1+=7;
-		R2.y1-=2;
-		R2.x2-=2;
-		R2.y2*=3;
+		R2.setX1(R2.getX1()*2);
+		R2.setY1(R2.getY1()%3);
+		R2.setX2(R2.getX2()+3);
+		R2.setY2(R2.getY2()+5);
 		
-		System.out.println("Rectagulo 1: (" + R1.x1 + " , " + R1.y1 + ") (" +  R1.x2 + " , " + R1.y2 + ")");
-		System.out.println("Rectagulo 2: (" + R2.x1 + " , " + R2.y1 + ") (" +  R2.x2 + " , " + R2.y2 + ")");
+		System.out.println("Rectagulo 1: (" + R1.getX1() + " , " + R1.getY1() + ") (" +  R1.getX2() + " , " + R1.getY2() + ")");
+		System.out.println("Rectagulo 2: (" + R2.getX1() + " , " + R2.getY1() + ") (" +  R2.getX2() + " , " + R2.getY2() + ")");
 		
-		System.out.println("Perimetro 1 = " + Math.abs((R1.x2-R1.x1 + R1.y2-R1.y1)*2) );
-		System.out.println("Perimetro 2 = " + Math.abs((R2.x2-R2.x1 + R2.y2-R2.y1)*2) );
+		System.out.println("Perimetro 1 = " + Math.abs((R1.getX2()-R1.getX1() + R1.getY2()-R1.getY1())*2) );
+		System.out.println("Perimetro 2 = " + Math.abs((R2.getX2()-R2.getX1() + R2.getY2()-R2.getY1())*2) );
 		
-		System.out.println("Area 1 = " + Math.abs(R1.x2-R1.x1)*Math.abs( R1.y2-R1.y1) );
-		System.out.println("Area 1 = " + Math.abs(R2.x2-R2.x1)*Math.abs( R2.y2-R2.y1) );
+		System.out.println("Area 1 = " + Math.abs(R1.getX2()-R1.getX1())*Math.abs( R1.getY2()-R1.getY1()) );
+		System.out.println("Area 1 = " + Math.abs(R2.getX2()-R2.getX1())*Math.abs( R2.getY2()-R2.getY1()) );
 		
 	}
 

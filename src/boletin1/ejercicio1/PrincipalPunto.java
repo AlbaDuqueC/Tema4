@@ -39,24 +39,24 @@ public class PrincipalPunto {
 		
 		
 		
-		System.out.println("Punto 1: ("+coordenada1.x + " , "+coordenada1.y+ ")");
-		System.out.println("Punto 2: ("+coordenada2.x + " , "+coordenada2.y+ ")");
-		System.out.println("Punto 3: ("+coordenada3.x + " , "+coordenada3.y+ ")");
+		System.out.println("Punto 1: ("+coordenada1.getX() + " , "+coordenada1.getY()+ ")");
+		System.out.println("Punto 2: ("+coordenada2.getX() + " , "+coordenada2.getY()+ ")");
+		System.out.println("Punto 3: ("+coordenada3.getX() + " , "+coordenada3.getY()+ ")");
 		
 		
-		coordenada1.x*= 5;
-		coordenada1.y-=0;
+		coordenada1.setX(coordenada1.getX()*2);
+		coordenada1.setY(coordenada1.getY()+3);
 		
-		coordenada2.x+=10;
-		coordenada2.y-=10;
+		coordenada2.setX(coordenada2.getX()*2);
+		coordenada2.setY(coordenada2.getY()+3);
 		
-		coordenada3.x-=-3;
-		coordenada3.y=+ 7;
+		coordenada3.setX(coordenada3.getX()*2);
+		coordenada3.setY(coordenada3.getY()+3);
 		
 		
-		System.out.println("Punto 1: ("+coordenada1.x + " , "+coordenada1.y+ ")");
-		System.out.println("Punto 2: ("+coordenada2.x + " , "+coordenada2.y+ ")");
-		System.out.println("Punto 3: ("+coordenada3.x + " , "+coordenada3.y+ ")");
+		System.out.println("Punto 1: ("+coordenada1.getX() + " , "+coordenada1.getY()+ ")");
+		System.out.println("Punto 2: ("+coordenada2.getX() + " , "+coordenada2.getY()+ ")");
+		System.out.println("Punto 3: ("+coordenada3.getX() + " , "+coordenada3.getY()+ ")");
 		
 	}
 

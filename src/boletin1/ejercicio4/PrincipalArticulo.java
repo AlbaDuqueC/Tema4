@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class PrincipalArticulo {
 	
+	
+
 	public static void main(String[] args) {
 		
 		Articulo art;
@@ -14,7 +16,7 @@ public class PrincipalArticulo {
 		String nombre= "";
 		double precio= 0;
 		int cuantosQuedan= 0;
-		int IVA=21;
+		
 		
 		System.out.println("Nombre del producto:");
 		nombre= sc.next();
@@ -26,12 +28,9 @@ public class PrincipalArticulo {
 		cuantosQuedan= sc.nextInt();
 		
 		
-		art= new Articulo(nombre, precio, cuantosQuedan, IVA);
+		art= new Articulo(nombre, precio, cuantosQuedan, Articulo.IVA);
 		
-		System.out.println(art.nombre+" - Precio: "+ art.precio + "€ - IVA: "+ art.IVA + "% - PVP: " + ((art.precio * (art.IVA *0.01)) + art.precio) + "€");
-		
-		art.precio= 12;
-		System.out.println(art.nombre+" - Precio: "+ art.precio + "€ - IVA: "+ art.IVA + "% - PVP: " + ((art.precio * (art.IVA *0.01)) + art.precio) + "€");
+		System.out.println(art.getNombre()+" - Precio: "+ art.getPrecio() + "€ - IVA: "+ Articulo.IVA + "% - PVP: " + ((art.getPrecio() * (Articulo.IVA *0.01)) + art.getPrecio()) + "€");
 		
 		
 	}
